@@ -40,10 +40,8 @@ vector<vector<bool>> matrix_star(const vector<vector<bool>> &first_matrix) {
     int size = first_matrix.size();
     vector<vector<bool>> res = vector<vector<bool>>(size, vector<bool>(size, false));
     for (int i = 0; i < size; i++) {
-        for (int j = i; j < size; j++) {
-            if (i == j) {
-                res[i][i] = true;
-            }
+        res[i][i] = true;
+        for (int j = i + 1; j < size; j++) {
             for (int k = i; k <= j; k++) {
                 if (!res[i][k])
                     continue;
@@ -162,4 +160,3 @@ int regular::longest_common_suffix() {
     }
     return 0;
 }
-
