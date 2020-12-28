@@ -106,16 +106,12 @@ bool EarleyParser::predict(const std::string &word) {
     configs[0].emplace(initial_rule, 0, 0);
     size_t old_size = configs[0].size();
     size_t new_size = old_size;
-    do {
-        old_size = new_size;
-        Predict(0);
-        Complete(0);
-        new_size = configs[0].size();
-    } while (old_size != new_size);
-    for (int j = 1; j < configs.size(); ++j) {
-        Scan(word, j - 1);
-        old_size = configs[j].size();
-        new_size = old_size;
+    for (int j = 0; j < configs.size(); ++j) {
+        if (j > 0) {
+            Scan(word, j - 1);
+            old_size = configs[j].size();
+            new_size = old_size;
+        }
         do {
             old_size = new_size;
             Predict(j);
