@@ -15,8 +15,7 @@ matrix_star(const std::vector <std::vector<bool>> &first_matrix, const std::vect
 
 class regular {
     //a stack of matrices in which the element [i][j] is true if the language currently accepts the word u[i...j]
-    std::vector <std::vector<std::vector < bool>>>
-    stack = std::vector < std::vector < std::vector < bool >> > ();
+    std::vector<std::vector<std::vector<bool>>> stack;
     //our expression
     std::string regular_exp;
     //given word
