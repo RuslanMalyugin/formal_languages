@@ -138,9 +138,8 @@ bool regular::processing(char symbol) {
 
 bool regular::parse_regular() {
     for (int i = 0; i < regular_exp.length(); i++) {
-        if (processing(regular_exp[i]))
-            continue;
-        else return false;
+        if (!processing(regular_exp[i]))
+            return false;
     }
     if (stack.size() != 1) {
         error_message();
