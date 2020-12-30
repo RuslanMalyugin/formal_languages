@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/User/CLionProjects/formal_lang_practice/regular.cpp
+iostream
+-
+string
+-
+vector
+-
+regular.h
+C:/Users/User/CLionProjects/formal_lang_practice/regular.h
+
+C:/Users/User/CLionProjects/formal_lang_practice/regular.h
+iostream
+-
+string
+-
+vector
+-
+
